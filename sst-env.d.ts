@@ -5,9 +5,20 @@ import "sst"
 export {}
 declare module "sst" {
   export interface Resource {
+    "MyVpc": {
+      "type": "sst.aws.Vpc"
+    }
     "NextJsDashboard2410": {
       "type": "sst.aws.Nextjs"
       "url": string
+    }
+    "NextjsDB": {
+      "database": string
+      "host": string
+      "password": string
+      "port": number
+      "type": "sst.aws.Postgres"
+      "username": string
     }
   }
 }

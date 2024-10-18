@@ -10,5 +10,6 @@ export default $config({
   },
   async run() {
     await import("./infra/web")
+    await import("./infra/db")
   },
 });
