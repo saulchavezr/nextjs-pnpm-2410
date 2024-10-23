@@ -6,6 +6,7 @@ export {}
 declare module "sst" {
   export interface Resource {
     "MyVpc": {
+      "bastion": string
       "type": "sst.aws.Vpc"
     }
     "NextJsDashboard2410": {

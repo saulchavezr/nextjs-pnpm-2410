@@ -10,6 +10,14 @@ export default $config({
   },
   async run() {
     await import("./infra/web")
-    await import("./infra/db")
+    let db = await import("./infra/db")
+    return {
+      host: db.database.host,
+      port: db.database.port,
+      database: db.database.database,
+      user: db.database.username,
+      password: db.database.password,
+      ssl: false
+    }
   },
 });
